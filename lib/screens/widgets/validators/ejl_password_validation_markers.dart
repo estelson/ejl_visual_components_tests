@@ -7,29 +7,29 @@ import 'package:flutter/material.dart';
 /// [At least 1 special character] - defaults to [false]
 /// [At least 8 characters] - defaults to [false]
 class EJLPasswordValidationMarkers extends StatelessWidget {
-  /// Whether the password contains at least one uppercase letter.
-  final bool containsUpperCase;
+  /// Whether the password is at least one uppercase letter.
+  final bool isUpperCase;
 
-  /// Whether the password contains at least one lowercase letter.
-  final bool containsLowerCase;
+  /// Whether the password is at least one lowercase letter.
+  final bool isLowerCase;
 
-  /// Whether the password contains at least one number.
-  final bool containsNumber;
+  /// Whether the password is at least one number.
+  final bool isNumber;
 
-  /// Whether the password contains at least one special character.
-  final bool containsSpecialChar;
+  /// Whether the password is at least one special character.
+  final bool isSpecialChar;
 
-  /// Whether the password contains at least 8 characters.
-  final bool contains8Length;
+  /// Whether the password is at least 8 characters.
+  final bool is8Length;
 
   /// Constructor of the [EJLPasswordValidationMarkers].
   const EJLPasswordValidationMarkers({
     super.key,
-    required this.containsUpperCase,
-    required this.containsLowerCase,
-    required this.containsNumber,
-    required this.containsSpecialChar,
-    required this.contains8Length,
+    required this.isUpperCase,
+    required this.isLowerCase,
+    required this.isNumber,
+    required this.isSpecialChar,
+    required this.is8Length,
   });
 
   /// Builds the [EJLPasswordValidationMarkers].
@@ -50,25 +50,21 @@ class EJLPasswordValidationMarkers extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                containsUpperCase
-                    ? "\u{2713}  1 uppercase"
-                    : "\u{2717}  1 uppercase",
+                isUpperCase ? "\u{2713}  1 uppercase" : "\u{2717}  1 uppercase",
                 style: TextStyle(
-                  color: containsUpperCase ? Colors.green : Colors.red,
+                  color: isUpperCase ? Colors.green : Colors.red,
                 ),
               ),
               Text(
-                containsLowerCase
-                    ? "\u{2713}  1 lowercase"
-                    : "\u{2717}  1 lowercase",
+                isLowerCase ? "\u{2713}  1 lowercase" : "\u{2717}  1 lowercase",
                 style: TextStyle(
-                  color: containsLowerCase ? Colors.green : Colors.red,
+                  color: isLowerCase ? Colors.green : Colors.red,
                 ),
               ),
               Text(
-                containsNumber ? "\u{2713}  1 number" : "\u{2717}  1 number",
+                isNumber ? "\u{2713}  1 number" : "\u{2717}  1 number",
                 style: TextStyle(
-                  color: containsNumber ? Colors.green : Colors.red,
+                  color: isNumber ? Colors.green : Colors.red,
                 ),
               ),
             ],
@@ -77,19 +73,15 @@ class EJLPasswordValidationMarkers extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                containsSpecialChar
-                    ? "\u{2713}  1 special character"
-                    : "\u{2717}  1 special character",
+                isSpecialChar ? "\u{2713}  1 special character" : "\u{2717}  1 special character",
                 style: TextStyle(
-                  color: containsSpecialChar ? Colors.green : Colors.red,
+                  color: isSpecialChar ? Colors.green : Colors.red,
                 ),
               ),
               Text(
-                contains8Length
-                    ? "\u{2713}  8 minimum characters"
-                    : "\u{2717}  8 minimum characters",
+                is8Length ? "\u{2713}  8 minimum characters" : "\u{2717}  8 minimum characters",
                 style: TextStyle(
-                  color: contains8Length ? Colors.green : Colors.red,
+                  color: is8Length ? Colors.green : Colors.red,
                 ),
               ),
             ],

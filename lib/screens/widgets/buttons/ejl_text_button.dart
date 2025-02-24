@@ -46,7 +46,17 @@ class EJLTextButton extends StatelessWidget {
   final double? borderRadius;
 
   /// Constructor of the [EJLTextButton].
-  const EJLTextButton({super.key, required this.onPressed, required this.labelText, this.textColor, this.fontSize, this.fontStyle, this.letterSpacing, this.fontWeight, this.borderRadius});
+  const EJLTextButton({
+    super.key,
+    required this.onPressed,
+    required this.labelText,
+    this.textColor,
+    this.fontSize,
+    this.fontStyle,
+    this.letterSpacing,
+    this.fontWeight,
+    this.borderRadius,
+  });
 
   /// Builds the [EJLTextButton].
   @override
@@ -55,10 +65,19 @@ class EJLTextButton extends StatelessWidget {
       onPressed: onPressed,
       style: TextButton.styleFrom(
         foregroundColor: textColor ?? Colors.blue,
-        textStyle: TextStyle(letterSpacing: letterSpacing),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius ?? 10)),
+        textStyle: TextStyle(
+          letterSpacing: letterSpacing,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius ?? 10),
+        ),
       ),
-      child: EJLText(text: labelText, fontSize: fontSize ?? 16, fontWeight: fontWeight ?? FontWeight.normal, textColor: textColor ?? Colors.blue),
+      child: EJLText(
+        text: labelText,
+        fontSize: fontSize ?? 16,
+        fontWeight: fontWeight ?? FontWeight.normal,
+        textColor: textColor ?? Colors.blue,
+      ),
     );
   }
 }

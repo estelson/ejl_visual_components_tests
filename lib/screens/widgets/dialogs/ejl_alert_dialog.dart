@@ -55,19 +55,27 @@ void ejlAlertDialog({
     dialogType: dialogType ?? DialogType.question,
     title: titleText ?? "",
     desc: messageText,
-    descTextStyle: TextStyle(fontSize: 16, color: Colors.grey[800]),
+    descTextStyle: TextStyle(
+      fontSize: 16,
+      color: Colors.grey[800],
+    ),
     width: MediaQuery.of(context).size.width * 0.80,
-    btnCancel:
-        onCancelPressed != null
-            ? EJLElevatedButton(
-              onPressed: onCancelPressed,
-              backgroundColor: Colors.red,
-              children: [EJLText(text: btnCancelText ?? "")],
-            )
-            : null,
+    btnCancel: onCancelPressed != null
+        ? EJLElevatedButton(
+            onPressed: onCancelPressed,
+            backgroundColor: Colors.red,
+            children: [
+              EJLText(
+                text: btnCancelText ?? "",
+              ),
+            ],
+          )
+        : null,
     btnOk: EJLElevatedButton(
       onPressed: onOkPressed,
-      children: [EJLText(text: btnOkText)],
+      children: [
+        EJLText(text: btnOkText),
+      ],
     ),
     dismissOnTouchOutside: dismissOnTouchOutside ?? false,
     dismissOnBackKeyPress: dismissOnBackKeyPress ?? false,

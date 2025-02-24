@@ -61,13 +61,14 @@ class EJLText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: textStyle ?? TextStyle(
-        fontStyle: fontStyle,
-        fontSize: fontSize ?? 16,
-        fontFamily: fontFamily,
-        fontWeight: fontWeight,
-        color: textColor,
-      ),
+      style: textStyle ??
+          TextStyle(
+            fontStyle: fontStyle,
+            fontSize: fontSize ?? 16,
+            fontFamily: fontFamily,
+            fontWeight: fontWeight,
+            color: textColor,
+          ),
       overflow: overflow,
     );
   }

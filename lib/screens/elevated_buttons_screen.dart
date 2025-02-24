@@ -25,26 +25,27 @@ class ElevatedButtonsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             /// Filled buttons
-            EJLText(text: "Filled buttons", fontSize: 18, fontWeight: FontWeight.bold, textColor: Colors.blueGrey),
+            EJLText(
+              text: "Filled buttons",
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              textColor: Colors.blueGrey,
+            ),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             EJLElevatedButton(
-              onPressed: () {
-
-              },
+              onPressed: () {},
               labelText: "EJLElevatedButton",
               fontSize: 18,
               fontWeight: FontWeight.bold,
               textColor: Colors.white,
             ),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             EJLElevatedButtonIcon(
-              onPressed: () {
-
-              },
+              onPressed: () {},
               icon: CupertinoIcons.check_mark_circled_solid,
               labelText: "EJLElevatedButtonIcon",
               fontSize: 18,
@@ -52,7 +53,7 @@ class ElevatedButtonsScreen extends StatelessWidget {
               textColor: Colors.white,
             ),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             Center(
               child: EJLIconButton(
@@ -63,12 +64,17 @@ class ElevatedButtonsScreen extends StatelessWidget {
 
             Divider(),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             /// Outlined buttons
-            EJLText(text: "Outlined buttons", fontSize: 18, fontWeight: FontWeight.bold, textColor: Colors.blueGrey),
+            EJLText(
+              text: "Outlined buttons",
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              textColor: Colors.blueGrey,
+            ),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             EJLOutlinedButton(
               onPressed: () {},
@@ -77,7 +83,7 @@ class ElevatedButtonsScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             EJLOutlinedButtonIcon(
               onPressed: () {},
@@ -87,16 +93,21 @@ class ElevatedButtonsScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             Divider(),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             /// Text buttons
-            EJLText(text: "Text buttons", fontSize: 18, fontWeight: FontWeight.bold, textColor: Colors.blueGrey),
+            EJLText(
+              text: "Text buttons",
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              textColor: Colors.blueGrey,
+            ),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             Center(
               child: EJLTextButton(
@@ -105,7 +116,7 @@ class ElevatedButtonsScreen extends StatelessWidget {
               ),
             ),
 
-            SizedBox( height: 16),
+            SizedBox(height: 16),
 
             Center(
               child: EJLTextButtonIcon(

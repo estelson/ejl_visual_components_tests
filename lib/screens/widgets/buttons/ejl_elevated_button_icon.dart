@@ -109,21 +109,35 @@ class EJLElevatedButtonIcon extends StatelessWidget {
     return ElevatedButton.icon(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        minimumSize: Size(width ?? MediaQuery.of(context).size.width, height ?? 50),
+        minimumSize: Size(
+          width ?? MediaQuery.of(context).size.width,
+          height ?? 50,
+        ),
         backgroundColor: backgroundColor ?? Colors.blue,
         foregroundColor: textColor ?? Colors.white,
         iconAlignment: iconAlignment ?? IconAlignment.start,
         shadowColor: Colors.grey,
-        textStyle: TextStyle(letterSpacing: letterSpacing),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius ?? 10)),
+        textStyle: TextStyle(
+          letterSpacing: letterSpacing,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius ?? 10),
+        ),
         elevation: elevation ?? 3,
         iconColor: textColor ?? Colors.white,
         iconSize: iconSize ?? 24,
       ),
-      label:
-          labelText != null
-              ? EJLText(text: labelText ?? "", fontSize: fontSize ?? 18, fontWeight: fontWeight ?? FontWeight.normal, textColor: textColor ?? Colors.white)
-              : Row(mainAxisAlignment: MainAxisAlignment.center, children: children!),
+      label: labelText != null
+          ? EJLText(
+              text: labelText ?? "",
+              fontSize: fontSize ?? 18,
+              fontWeight: fontWeight ?? FontWeight.normal,
+              textColor: textColor ?? Colors.white,
+            )
+          : Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: children!,
+            ),
       icon: Icon(icon),
     );
   }
