@@ -1,0 +1,6 @@
+/// TODO: Create CommonMethods.checkConnectivityMethod(BuildContext context) => [https://github.com/estelson/cupcake/blob/master/lib/commons/common_methods.dart]
+/// TODO: Create Formatters => [https://github.com/estelson/cupcake/blob/master/lib/utils/formatters/formatter.dart] and [https://github.com/estelson/flutter_t_store/blob/master/lib/utils/formatters/formatter.dart]
+/// TODO: Create CustomAppBar => [https://github.com/estelson/cupcake/blob/master/lib/view/widgets/custom_app_bar.dart]
+/// TODO: Create CustomResponsiveScreen => [https://github.com/estelson/cupcake/blob/master/lib/view/widgets/responsive_widget.dart]
+/// TODO: Create Macro widget => [https://github.com/estelson/pizza_app/blob/master/lib/components/macro.dart]
+/// TODO: Check and create Utils classes => [https://github.com/estelson/flutter_t_store/tree/master/lib/utils]

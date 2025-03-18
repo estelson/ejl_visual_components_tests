@@ -1,5 +1,6 @@
 import 'package:ejl_visual_components_tests/screens/dialogs_screen.dart';
 import 'package:ejl_visual_components_tests/screens/elevated_buttons_screen.dart';
+import 'package:ejl_visual_components_tests/screens/form_fields_screen.dart';
 import 'package:ejl_visual_components_tests/screens/widgets/buttons/ejl_elevated_button.dart';
 import 'package:ejl_visual_components_tests/screens/widgets/others/ejl_text.dart';
 import 'package:flutter/material.dart';
@@ -102,47 +103,19 @@ class HomePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       textColor: Colors.blueGrey,
                     ),
-                  ],
-                ),
-              ),
-            ),
 
-            SizedBox(height: 16),
+                    SizedBox(height: 16),
 
-            /// Validators section
-            Card(
-              elevation: 3,
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    EJLText(
-                      text: "Validations",
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      textColor: Colors.blueGrey,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-
-            SizedBox(height: 16),
-
-            /// Others section
-            Card(
-              elevation: 3,
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    EJLText(
-                      text: "Others",
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      textColor: Colors.blueGrey,
+                    EJLElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const EJLFormFieldsScreen(),
+                          ),
+                        );
+                      },
+                      labelText: "EJL Form Fields",
                     ),
                   ],
                 ),

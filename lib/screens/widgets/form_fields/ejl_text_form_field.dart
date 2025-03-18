@@ -47,6 +47,8 @@ class EJLTextFormField extends StatelessWidget {
   /// Whether to obscure the text.
   ///
   /// Mainly used in password fields
+  ///
+  /// default value is [false].
   final bool? isObscureText;
 
   /// Validator to validate the input.
@@ -67,6 +69,11 @@ class EJLTextFormField extends StatelessWidget {
   /// If true, the field will be dense, reducing its height.
   final bool? isDense;
 
+  /// If false, the field will be disabled.
+  ///
+  /// default value is [true].
+  final bool? isEnabled;
+
   /// Constructor of the [EJLTextFormField].
   const EJLTextFormField({
     super.key,
@@ -82,13 +89,14 @@ class EJLTextFormField extends StatelessWidget {
     this.keyboardType,
     this.prefixIcon,
     this.suffixIcon,
-    this.isObscureText,
+    this.isObscureText  = false,
     this.validator,
     this.onChanged,
     this.borderColor,
     this.fillColor,
     this.filled,
     this.isDense,
+    this.isEnabled,
   });
 
   /// Builds the [EJLTextFormField].
@@ -100,7 +108,7 @@ class EJLTextFormField extends StatelessWidget {
       obscureText: isObscureText ?? false,
       keyboardType: keyboardType,
       onChanged: onChanged,
-      maxLines: maxLines != null && maxLines! > 0 ? maxLines : null,
+      maxLines: maxLines != null && maxLines! > 0 && isObscureText == false ? maxLines : 1,
       minLines: minLines != null && minLines! > 0 ? minLines : null,
       maxLength: maxLength != null && maxLength! > 0 ? maxLength : null,
       decoration: InputDecoration(
@@ -122,21 +130,29 @@ class EJLTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         disabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey.shade800),
+          borderSide: BorderSide(color: Colors.grey.shade600),
           borderRadius: BorderRadius.circular(10),
         ),
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.red),
           borderRadius: BorderRadius.circular(10),
         ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 2,
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
         labelText: labelText,
         labelStyle: labelStyle,
         hintText: hintText,
         hintStyle: hintStyle,
-        errorText: errorMessage,
-        fillColor: fillColor,
-        filled: filled ?? false,
+        fillColor: fillColor ?? Colors.white,
+        filled: filled ?? true,
         isDense: isDense ?? false,
+        enabled: isEnabled ?? true,
+        errorText: errorMessage,
       ),
     );
   }
