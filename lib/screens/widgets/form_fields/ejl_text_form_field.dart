@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 /// Derivation of the [TextFormField] widget simplifying its use
 class EJLTextFormField extends StatelessWidget {
   /// Controller to get and set the text.
-  ///
-  /// [required]
   final TextEditingController? controller;
 
   /// Text to display on the label.

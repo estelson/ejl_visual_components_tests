@@ -91,7 +91,7 @@ class EJLTextButtonIcon extends StatelessWidget {
       icon: Icon(icon),
       label: EJLText(
         text: labelText,
-        fontSize: fontSize ?? 16,
+        fontSize: fontSize,
         fontWeight: fontWeight ?? FontWeight.normal,
         textColor: textColor ?? Colors.blue,
       ),

@@ -16,7 +16,8 @@ class ElevatedButtonsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Elevated Buttons'),
+        forceMaterialTransparency: true,
+        title: const Text("Elevated Buttons"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -25,104 +26,113 @@ class ElevatedButtonsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             /// Filled buttons
-            EJLText(
-              text: "Filled buttons",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.blueGrey,
-            ),
-
-            SizedBox(height: 16),
-
-            EJLElevatedButton(
-              onPressed: () {},
-              labelText: "EJLElevatedButton",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.white,
-            ),
-
-            SizedBox(height: 16),
-
-            EJLElevatedButtonIcon(
-              onPressed: () {},
-              icon: CupertinoIcons.check_mark_circled_solid,
-              labelText: "EJLElevatedButtonIcon",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.white,
-            ),
-
-            SizedBox(height: 16),
-
-            Center(
-              child: EJLIconButton(
-                icon: CupertinoIcons.check_mark_circled_solid,
-                onPressed: () {},
+            Card(
+              elevation: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EJLText(
+                      text: "Filled buttons",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.blueGrey,
+                    ),
+                    SizedBox(height: 16),
+                    EJLElevatedButton(
+                      onPressed: () {},
+                      labelText: "EJLElevatedButton",
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.white,
+                    ),
+                    SizedBox(height: 16),
+                    EJLElevatedButtonIcon(
+                      onPressed: () {},
+                      icon: CupertinoIcons.check_mark_circled_solid,
+                      labelText: "EJLElevatedButtonIcon",
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.white,
+                    ),
+                    SizedBox(height: 16),
+                    Center(
+                      child: EJLIconButton(
+                        icon: CupertinoIcons.check_mark_circled_solid,
+                        onPressed: () {},
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-
-            Divider(),
 
             SizedBox(height: 16),
 
             /// Outlined buttons
-            EJLText(
-              text: "Outlined buttons",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.blueGrey,
-            ),
-
-            SizedBox(height: 16),
-
-            EJLOutlinedButton(
-              onPressed: () {},
-              labelText: "EJLOutlinedButton",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
-
-            SizedBox(height: 16),
-
-            EJLOutlinedButtonIcon(
-              onPressed: () {},
-              icon: CupertinoIcons.check_mark_circled_solid,
-              labelText: "EJLOutlinedButtonIcon",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
-
-            SizedBox(height: 16),
-
-            Divider(),
-
-            SizedBox(height: 16),
-
-            /// Text buttons
-            EJLText(
-              text: "Text buttons",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.blueGrey,
-            ),
-
-            SizedBox(height: 16),
-
-            Center(
-              child: EJLTextButton(
-                onPressed: () {},
-                labelText: "EJLTextButton",
+            Card(
+              elevation: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EJLText(
+                      text: "Outlined buttons",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.blueGrey,
+                    ),
+                    SizedBox(height: 16),
+                    EJLOutlinedButton(
+                      onPressed: () {},
+                      labelText: "EJLOutlinedButton",
+                      fontWeight: FontWeight.bold,
+                    ),
+                    SizedBox(height: 16),
+                    EJLOutlinedButtonIcon(
+                      onPressed: () {},
+                      icon: CupertinoIcons.check_mark_circled_solid,
+                      labelText: "EJLOutlinedButtonIcon",
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ],
+                ),
               ),
             ),
 
             SizedBox(height: 16),
 
-            Center(
-              child: EJLTextButtonIcon(
-                onPressed: () {},
-                icon: CupertinoIcons.check_mark_circled_solid,
-                labelText: "EJLTextButtonIcon",
+            /// Text buttons
+            Card(
+              elevation: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EJLText(
+                      text: "Text buttons",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.blueGrey,
+                    ),
+                    SizedBox(height: 8),
+                    Center(
+                      child: EJLTextButton(
+                        onPressed: () {},
+                        labelText: "EJLTextButton",
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Center(
+                      child: EJLTextButtonIcon(
+                        onPressed: () {},
+                        icon: CupertinoIcons.check_mark_circled_solid,
+                        labelText: "EJLTextButtonIcon",
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

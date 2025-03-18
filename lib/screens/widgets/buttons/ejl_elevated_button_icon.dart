@@ -130,8 +130,8 @@ class EJLElevatedButtonIcon extends StatelessWidget {
       label: labelText != null
           ? EJLText(
               text: labelText ?? "",
-              fontSize: fontSize ?? 18,
-              fontWeight: fontWeight ?? FontWeight.normal,
+              fontSize: fontSize ?? 16,
+              fontWeight: fontWeight ?? FontWeight.bold,
               textColor: textColor ?? Colors.white,
             )
           : Row(

@@ -1,3 +1,4 @@
+import 'package:ejl_visual_components_tests/screens/dialogs_screen.dart';
 import 'package:ejl_visual_components_tests/screens/elevated_buttons_screen.dart';
 import 'package:ejl_visual_components_tests/screens/widgets/buttons/ejl_elevated_button.dart';
 import 'package:ejl_visual_components_tests/screens/widgets/others/ejl_text.dart';
@@ -22,71 +23,131 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             /// Buttons section
-            EJLText(
-              text: "Buttons",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.blueGrey,
-            ),
-            Divider(),
-            EJLElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ElevatedButtonsScreen(),
-                  ),
-                );
-              },
-              labelText: "EJLElevatedButtons",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.white,
+            Card(
+              elevation: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EJLText(
+                      text: "Buttons",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.blueGrey,
+                    ),
+                    SizedBox(height: 16),
+                    EJLElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ElevatedButtonsScreen(),
+                          ),
+                        );
+                      },
+                      labelText: "EJL Elevated Buttons",
+                    ),
+                  ],
+                ),
+              ),
             ),
 
-            SizedBox(height: 24),
+            SizedBox(height: 16),
 
             /// Dialogs section
-            EJLText(
-              text: "Dialogs",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.blueGrey,
+            Card(
+              elevation: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EJLText(
+                      text: "Dialogs",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.blueGrey,
+                    ),
+                    SizedBox(height: 16),
+                    EJLElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const DialogsScreen(),
+                          ),
+                        );
+                      },
+                      labelText: "EJL Dialogs",
+                    ),
+                  ],
+                ),
+              ),
             ),
-            Divider(),
 
-            SizedBox(height: 24),
+            SizedBox(height: 16),
 
             /// FormFields section
-            EJLText(
-              text: "FormFields",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.blueGrey,
+            Card(
+              elevation: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EJLText(
+                      text: "Form fields",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.blueGrey,
+                    ),
+                  ],
+                ),
+              ),
             ),
-            Divider(),
 
-            SizedBox(height: 24),
+            SizedBox(height: 16),
 
             /// Validators section
-            EJLText(
-              text: "Validations",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.blueGrey,
+            Card(
+              elevation: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EJLText(
+                      text: "Validations",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.blueGrey,
+                    ),
+                  ],
+                ),
+              ),
             ),
-            Divider(),
 
-            SizedBox(height: 24),
+            SizedBox(height: 16),
 
             /// Others section
-            EJLText(
-              text: "Others",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              textColor: Colors.blueGrey,
+            Card(
+              elevation: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EJLText(
+                      text: "Others",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      textColor: Colors.blueGrey,
+                    ),
+                  ],
+                ),
+              ),
             ),
-            Divider(),
           ],
         ),
       ),

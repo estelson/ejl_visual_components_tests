@@ -74,7 +74,7 @@ class EJLTextButton extends StatelessWidget {
       ),
       child: EJLText(
         text: labelText,
-        fontSize: fontSize ?? 16,
+        fontSize: fontSize,
         fontWeight: fontWeight ?? FontWeight.normal,
         textColor: textColor ?? Colors.blue,
       ),

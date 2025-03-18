@@ -64,7 +64,7 @@ class EJLText extends StatelessWidget {
       style: textStyle ??
           TextStyle(
             fontStyle: fontStyle,
-            fontSize: fontSize ?? 16,
+            fontSize: fontSize,
             fontFamily: fontFamily,
             fontWeight: fontWeight,
             color: textColor,

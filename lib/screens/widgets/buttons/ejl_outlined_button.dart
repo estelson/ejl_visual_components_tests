@@ -102,8 +102,8 @@ class EJLOutlinedButton extends StatelessWidget {
       child: labelText != null
           ? EJLText(
               text: labelText ?? "",
-              fontSize: fontSize ?? 18,
-              fontWeight: fontWeight ?? FontWeight.normal,
+              fontSize: fontSize ?? 16,
+              fontWeight: fontWeight ?? FontWeight.bold,
               textColor: textColor ?? Colors.blue,
             )
           : Row(
